@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>登陆界面</title>
+
+<style type="text/css">
+
+#team-box{
+   font-size:20px;
+   color:#26A65B;
+   text-align: center;
+   margin-bottom: 40px;
+
+}
+#username-box {
+	text-align: center;
+	margin-bottom: 20px;
+
+}
+#password-box{
+	text-align: center;
+	margin-bottom: 20px;
+}
+#submit-box{
+	text-align: center;
+}
+
+#username-box input{
+width:200px;
+height: 30px;
+background: url(E:/前端/微力/images/username.png) no-repeat;
+background-color: white;
+background-position: 4px;
+background-size: 12px;
+padding-left: 20px;
+border:1px solid gray;
+border-radius: 5px;
+}
+
+#username-box span{
+width:200px;
+height: 0px;
+padding-left: 454px;
+  margin-bottom: -20px;
+}
+
+#password-box input{
+width:200px;
+height: 30px;
+background: url(E:/前端/微力/images/passwd.png) no-repeat;
+background-color: white;
+background-position: 4px;
+background-size: 12px;
+padding-left: 20px;
+border:1px solid gray;
+border-radius: 5px;
+}	
+
+#password-box span
+{
+width:200px;
+height: 0px;
+padding-left: 454px;
+  margin-bottom: -20px;
+  
+}
+#submit-box button{
+width:225px;
+height: 35px;
+background-color:#26A65B;
+border:1px solid gray;
+border-radius: 5px;
+}
+
+</style>
+</head>
+ 
+<body>
+    
+<form method="post">
+<div id="team-box">
+    <h3>team</h3>
+</div>
+     
+    <div id="username-box">
+           <input type="text"  placeholder="用户名" id="username" 
+          autocomplete="off" onfocus="this.placeholder=''" > 
+           <span id="u" style="display: none;color: red;font-size: 10px;">请输入姓名</span>
+          <br/>
+    </div>
+      
+      
+    <div id="password-box">
+           <input type="password"  placeholder="密码" id="password" 
+           autocomplete="off" onfocus="this.placeholder=''" >
+             <span id="p" style="display: none;color: red;font-size: 10px;">请输入密码</span>
+            <br/>
+    </div>
+     
+
+       
+    <div id="submit-box">
+      <button type="button" id="submit">提交</button>
+       
+          
+    </div>
+</form>
+<script type="text/javascript">
+  var x=document.getElementById("username")
+  var y=document.getElementById("password")
+  var btnsubmit=document.getElementById("submit")
+    var u=document.getElementById("u")
+    var p=document.getElementById("p")
+    btnsubmit.onclick=function(form)
+    {
+
+      if(x.value=="")
+      {
+        if(y.value=="")
+        {
+          u.style.display="block";
+          p.style.display="block";
+        }
+        else
+        {
+          u.style.display="block";
+          p.style.display="none";
+        }
+      }
+      else
+      {
+        if(y.value=="")
+        {
+          u.style.display="none";
+          p.style.display="block";
+        }
+        else
+        {
+          u.style.display="none";
+          p.style.display="none";
+        }
+      }
+    }
+</script>
+     
+</body>
+ 
+</html>
+
+
